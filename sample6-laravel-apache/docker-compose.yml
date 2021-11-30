@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"
+    environment:
+      - MYSQL_HOST=localhost
+      - MYSQL_PORT=3306
+      - MYSQL_DATABASE=laravel_test
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
